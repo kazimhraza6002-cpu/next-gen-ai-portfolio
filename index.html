@@ -1,1 +1,157 @@
-<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Portfolio</title>\n    <style>\n        body {\n            margin: 0;\n            font-family: Arial, sans-serif;\n            background: #f0f0f0;\n        }\n        .hero {\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background: rgba(255, 255, 255, 0.1);\n            backdrop-filter: blur(10px);\n            color: white;\n            text-align: center;\n        }\n        section {\n            padding: 50px;\n            background: rgba(255, 255, 255, 0.7);\n            backdrop-filter: blur(5px);\n            border-radius: 15px;\n            margin: 20px;\n        }\n        h2 {\n            color: #333;\n        }\n        .fade-in {\n            animation: fadeIn 1s;\n        }\n        @keyframes fadeIn {\n            from {\n                opacity: 0;\n            }\n            to {\n                opacity: 1;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"hero fade-in\">\n        <h1>Welcome to My AI Portfolio</h1>\n    </div>\n    <section class=\"about fade-in\">\n        <h2>About Me</h2>\n        <p>I am a passionate AI Developer, skilled in building innovative solutions.</p>\n    </section>\n    <section class=\"services fade-in\">\n        <h2>Services</h2>\n        <ul>\n            <li>AI Consulting</li>\n            <li>Machine Learning Solutions</li>\n            <li>Data Analysis</li>\n        </ul>\n    </section>\n    <section class=\"skills fade-in\">\n        <h2>Skills</h2>\n        <p>Python, JavaScript, AI/ML, Data Science</p>\n    </section>\n    <section class=\"portfolio fade-in\">\n        <h2>Portfolio</h2>\n        <p>Check out my latest projects on GitHub.</p>\n    </section>\n    <section class=\"contact fade-in\">\n        <h2>Contact</h2>\n        <p>Email: kazimhraza6002@example.com</p>\n    </section>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazim Raza's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background-attachment: fixed;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        .btn {
+            padding: 15px 30px;
+            background: #fff;
+            border: none;
+            color: #6a11cb;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .about, .services, .skills, .portfolio, .contact {
+            padding: 50px 20px;
+        }
+        .services .card, .portfolio .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            transition: transform 0.3s;
+        }
+        .services .card:hover, .portfolio .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Kazim Raza</div>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>AI Automation & Software Development Solutions</h1>
+    <button class="btn">Hire Me</button>
+    <button class="btn">View Projects</button>
+</section>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Welcome! I'm Kazim Raza, a passionate developer focused on creating innovative solutions through AI and software development.</p>
+</section>
+
+<section id="services" class="services">
+    <h2>My Services</h2>
+    <div class="card">AI Chatbot</div>
+    <div class="card">AI Calling Agent</div>
+    <div class="card">SaaS Development</div>
+    <div class="card">CRM Automation</div>
+    <div class="card">WhatsApp Automation</div>
+    <div class="card">Custom Software</div>
+</section>
+
+<section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <span>Python</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Node.js</span>
+    <span>n8n</span>
+    <span>Automation</span>
+    <span>API Integrations</span>
+    <span>Database Management</span>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <h2>My Projects</h2>
+    <div class="card">SmartCare Hospital Management System</div>
+    <div class="card">AI Calling Agent</div>
+    <div class="card">WhatsApp Bot</div>
+    <div class="card">CRM Dashboard</div>
+    <div class="card">POS Billing System</div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: kazim@example.com</p>
+    <p>WhatsApp: +1234567890</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/kazimraza">/in/kazimraza</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Kazim Raza. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
