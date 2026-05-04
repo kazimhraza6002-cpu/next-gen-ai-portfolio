@@ -1,251 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Next Gen AI Solutions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Gen AI Solutions</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial,sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-    body{
-      background:#0f172a;
-      color:white;
-      overflow-x:hidden;
-    }
+body{
+  background:#0f172a;
+  color:white;
+  overflow-x:hidden;
+}
 
-    html{
-      scroll-behavior:smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    /* Animated background */
-    #bg{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      z-index:-1;
-    }
+/* Background */
+#bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
 
-    /* Navbar */
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 50px;
-      position:sticky;
-      top:0;
-      backdrop-filter:blur(10px);
-      background:rgba(255,255,255,0.05);
-    }
+/* Navbar */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
 
-    .logo{
-      font-size:22px;
-      font-weight:bold;
-      color:#38bdf8;
-    }
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#38bdf8;
+}
 
-    .btn{
-      background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-      padding:12px 20px;
-      border-radius:10px;
-      color:black;
-      text-decoration:none;
-      font-weight:bold;
-      border:none;
-      cursor:pointer;
-      transition:0.3s;
-    }
+/* Buttons */
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  padding:14px 24px;
+  border-radius:10px;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+  transition:0.3s;
+  margin-top:20px;
+}
 
-    .btn:hover{
-      transform:scale(1.08);
-    }
+.btn:hover{
+  transform:scale(1.08);
+}
 
-    /* Hero */
-    .hero{
-      text-align:center;
-      padding:120px 20px;
-    }
+/* Hero */
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
 
-    .hero h1{
-      font-size:55px;
-      background:linear-gradient(90deg,#38bdf8,#ffffff);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
+.hero h1{
+  font-size:55px;
+  margin-bottom:20px;
+  line-height:1.2;
+  background:linear-gradient(90deg,#38bdf8,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .hero p{
-      margin-top:15px;
-      color:#94a3b8;
-      font-size:18px;
-    }
+.hero p{
+  margin-bottom:30px;
+  color:#94a3b8;
+  font-size:18px;
+  line-height:1.6;
+}
 
-    /* Services */
-    .container{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      padding:50px 20px;
-    }
-<!-- PORTFOLIO SECTION -->
-<div id="portfolio" class="portfolio">
-  <h2>Our Portfolio</h2>
-  <p>Projects and solutions we have built for businesses.</p>
+/* Services */
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:50px 20px;
+}
 
-  <div class="portfolio-grid">
+.card{
+  width:260px;
+  padding:25px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
 
-    <div class="portfolio-card">
-      <h3>AI Customer Support Bot</h3>
-      <p>24/7 customer support automation for websites and businesses.</p>
-    </div>
+.card:hover{
+  transform:translateY(-10px);
+}
 
-    <div class="portfolio-card">
-      <h3>AI Calling Agent</h3>
-      <p>Automated calling system for appointments and lead follow-ups.</p>
-    </div>
+.card h3{
+  margin-bottom:15px;
+}
 
-    <div class="portfolio-card">
-      <h3>SaaS Dashboard</h3>
-      <p>Analytics dashboard with automation workflows and reports.</p>
-    </div>
+.card p{
+  line-height:1.6;
+}
 
-    <div class="portfolio-card">
-      <h3>Hospital Management System</h3>
-      <p>Offline-first desktop ERP software for clinics and hospitals.</p>
-    </div>
+/* Portfolio */
+.portfolio{
+  text-align:center;
+  padding:80px 20px;
+}
 
-    <div class="portfolio-card">
-      <h3>Software Development</h3>
-      <p>Custom web apps, desktop software, automation tools, and business systems.</p>
-    </div>
+.portfolio h2{
+  color:#38bdf8;
+  margin-bottom:20px;
+}
 
-    <div class="portfolio-card">
-      <h3>E-commerce Automation</h3>
-      <p>Store automation, chatbot sales systems, and customer workflows.</p>
-    </div>
+.portfolio-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
 
-  </div>
-</div>
-    .card{
-      width:260px;
-      padding:25px;
-      border-radius:15px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-      transition:0.3s;
-    }
+.portfolio-card{
+  width:280px;
+  padding:20px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+}
 
-    .card:hover{
-      transform:translateY(-10px);
-    }
+/* Lead form */
+.lead-section{
+  text-align:center;
+  padding:80px 20px;
+}
 
-    /* Portfolio */
-    .portfolio{
-      text-align:center;
-      padding:80px 20px;
-    }
+#leadForm{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
 
-    .portfolio h2{
-      color:#38bdf8;
-      margin-bottom:30px;
-    }
+input,textarea{
+  padding:14px;
+  border:none;
+  border-radius:10px;
+}
 
-    .portfolio-grid{
-      display:flex;
-      flex-wrap:wrap;
-      gap:20px;
-      justify-content:center;
-    }
+textarea{
+  min-height:120px;
+}
 
-    .portfolio-card{
-      width:280px;
-      padding:20px;
-      border-radius:15px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-    }
+/* Contact */
+.contact{
+  text-align:center;
+  padding:80px 20px;
+}
 
-    /* Lead form */
-    .lead-section{
-      text-align:center;
-      padding:80px 20px;
-    }
+.contact h2{
+  color:#38bdf8;
+  margin-bottom:20px;
+}
 
-    #leadForm{
-      max-width:500px;
-      margin:auto;
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-    }
+.contact p{
+  color:#94a3b8;
+  margin:8px 0;
+}
 
-    input, textarea{
-      padding:14px;
-      border:none;
-      border-radius:10px;
-      outline:none;
-    }
+.contact .btn{
+  margin-top:25px;
+}
 
-    textarea{
-      min-height:120px;
-    }
-
-    /* Contact */
-    .contact{
-      text-align:center;
-      padding:80px 20px;
-    }
-
-    .contact h2{
-      color:#38bdf8;
-      margin-bottom:20px;
-    }
-
-    .contact p{
-      color:#94a3b8;
-      margin:8px 0;
-    }
-
-    .footer{
-      text-align:center;
-      padding:20px;
-      color:#64748b;
-    }
-  </style>
+/* Footer */
+.footer{
+  text-align:center;
+  padding:20px;
+  color:#64748b;
+}
+</style>
 </head>
 
 <body>
 
 <canvas id="bg"></canvas>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <div class="nav">
   <div class="logo">Next Gen AI</div>
   <a href="#contact" class="btn">Contact</a>
 </div>
 
-<!-- HERO -->
+<!-- Hero -->
 <div class="hero">
   <h1>Build Smart AI Solutions</h1>
   <p>
     AI Chatbots, Calling Bots, SaaS Platforms & Custom Software Development
-    for modern businesses
   </p>
   <a href="#lead" class="btn">Get Started</a>
 </div>
 
-<!-- SERVICES -->
+<!-- Services -->
 <div class="container">
   <div class="card">
     <h3>AI Chatbot</h3>
-    <p>Smart chatbot solutions for websites and businesses.</p>
+    <p>Smart chatbot solutions for businesses.</p>
   </div>
 
   <div class="card">
@@ -255,16 +234,16 @@
 
   <div class="card">
     <h3>SaaS Platform</h3>
-    <p>Scalable SaaS systems for startups and enterprises.</p>
+    <p>Scalable SaaS systems for startups.</p>
   </div>
 
   <div class="card">
     <h3>Software Development</h3>
-    <p>Custom desktop apps, web apps, automation tools, and business software.</p>
+    <p>Custom apps, automation tools, and business software.</p>
   </div>
 </div>
 
-<!-- PORTFOLIO -->
+<!-- Portfolio -->
 <div class="portfolio">
   <h2>Our Portfolio</h2>
 
@@ -272,146 +251,126 @@
 
     <div class="portfolio-card">
       <h3>AI Customer Support Bot</h3>
-      <p>24/7 customer support automation.</p>
+      <p>24/7 support automation.</p>
     </div>
 
     <div class="portfolio-card">
       <h3>AI Calling Agent</h3>
-      <p>Appointment booking and follow-up automation.</p>
+      <p>Lead follow-up automation.</p>
     </div>
 
     <div class="portfolio-card">
       <h3>SaaS Dashboard</h3>
-      <p>Analytics dashboards and workflow automation.</p>
+      <p>Analytics & automation systems.</p>
     </div>
 
     <div class="portfolio-card">
       <h3>Hospital Management System</h3>
-      <p>Offline-first ERP software for clinics.</p>
+      <p>Clinic ERP software.</p>
     </div>
 
     <div class="portfolio-card">
       <h3>Software Development</h3>
-      <p>Custom software solutions built for business growth.</p>
+      <p>Custom software solutions.</p>
     </div>
 
   </div>
 </div>
 
-<!-- LEAD FORM -->
+<!-- Lead Form -->
 <div id="lead" class="lead-section">
   <h2>Start Your Project</h2>
-  <p>Tell us what you need.</p>
 
   <form id="leadForm">
-    <input type="text" id="name" placeholder="Your Name" required />
-    <input type="email" id="email" placeholder="Your Email" required />
-    <input type="text" id="service" placeholder="Service Needed" required />
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="text" id="service" placeholder="Service Needed" required>
     <textarea id="message" placeholder="Project Details" required></textarea>
 
     <button type="submit" class="btn">Submit Inquiry</button>
   </form>
 </div>
 
-<!-- CONTACT -->
+<!-- Contact -->
 <div id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p>📧 Email: kazimraza6002@gmail.com</p>
-  <p>📱 WhatsApp: 0344-6824859</p>
-  <p>💼 Next Gen AI Solutions</p>
+  <p>📧 kazimraza6002@gmail.com</p>
+  <p>📱 0344-6824859</p>
 
   <a class="btn" href="https://wa.me/923446824859" target="_blank">
-    Message on WhatsApp
+    WhatsApp
   </a>
 </div>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <div class="footer">
   © 2026 Next Gen AI Solutions
 </div>
 
 <script>
-  // Lead form save
-  document.getElementById("leadForm").addEventListener("submit", function(e){
-    e.preventDefault();
+// Lead form
+document.getElementById("leadForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  alert("Inquiry Submitted Successfully");
+  this.reset();
+});
 
-    const lead = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      service: document.getElementById("service").value,
-      message: document.getElementById("message").value
-    };
+// Background animation
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
 
-    let leads = JSON.parse(localStorage.getItem("leads")) || [];
-    leads.push(lead);
-    localStorage.setItem("leads", JSON.stringify(leads));
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-    alert("Thanks! Your inquiry has been submitted.");
-    this.reset();
+let particles=[];
+
+class Particle{
+  constructor(){
+    this.x=Math.random()*canvas.width;
+    this.y=Math.random()*canvas.height;
+    this.size=Math.random()*3;
+    this.speedX=(Math.random()-0.5);
+    this.speedY=(Math.random()-0.5);
+  }
+
+  update(){
+    this.x+=this.speedX;
+    this.y+=this.speedY;
+
+    if(this.x>canvas.width) this.x=0;
+    if(this.x<0) this.x=canvas.width;
+    if(this.y>canvas.height) this.y=0;
+    if(this.y<0) this.y=canvas.height;
+  }
+
+  draw(){
+    ctx.fillStyle="rgba(56,189,248,0.6)";
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.fill();
+  }
+}
+
+function init(){
+  particles=[];
+  for(let i=0;i<80;i++){
+    particles.push(new Particle());
+  }
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(p=>{
+    p.update();
+    p.draw();
   });
 
-  // Animated particles
-  const canvas = document.getElementById("bg");
-  const ctx = canvas.getContext("2d");
+  requestAnimationFrame(animate);
+}
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  let particles = [];
-
-  class Particle{
-    constructor(){
-      this.x = Math.random()*canvas.width;
-      this.y = Math.random()*canvas.height;
-      this.size = Math.random()*3;
-      this.speedX = (Math.random()-0.5);
-      this.speedY = (Math.random()-0.5);
-    }
-
-    update(){
-      this.x += this.speedX;
-      this.y += this.speedY;
-
-      if(this.x > canvas.width) this.x = 0;
-      if(this.x < 0) this.x = canvas.width;
-      if(this.y > canvas.height) this.y = 0;
-      if(this.y < 0) this.y = canvas.height;
-    }
-
-    draw(){
-      ctx.fillStyle = "rgba(56,189,248,0.6)";
-      ctx.beginPath();
-      ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-      ctx.fill();
-    }
-  }
-
-  function init(){
-    particles = [];
-    for(let i=0;i<80;i++){
-      particles.push(new Particle());
-    }
-  }
-
-  function animate(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    particles.forEach(p=>{
-      p.update();
-      p.draw();
-    });
-
-    requestAnimationFrame(animate);
-  }
-
-  init();
-  animate();
-
-  window.addEventListener("resize",()=>{
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
-  });
+init();
+animate();
 </script>
 
 </body>
