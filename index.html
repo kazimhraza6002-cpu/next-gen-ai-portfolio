@@ -1,84 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Gen AI Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Next Gen AI Solutions</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* BACKGROUND CANVAS */
+    #bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    /* BUTTON */
+    .btn {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      background: linear-gradient(90deg, #38bdf8, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    /* CARDS */
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 15px;
+      width: 260px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(56,189,248,0.1);
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(255,255,255,0.03);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #94a3b8;
+      margin: 6px 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="hero">
-            <h1>Next Gen AI Solutions</h1>
-            <div class="ai-brain-animation">
-                <!-- Insert 3D AI brain animation code here -->
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="services">
-            <div class="service-card">
-                <h2>Service 1</h2>
-                <p>Description of Service 1.</p>
-            </div>
-            <div class="service-card">
-                <h2>Service 2</h2>
-                <p>Description of Service 2.</p>
-            </div>
-            <div class="service-card">
-                <h2>Service 3</h2>
-                <p>Description of Service 3.</p>
-            </div>
-            <div class="service-card">
-                <h2>Service 4</h2>
-                <p>Description of Service 4.</p>
-            </div>
-            <div class="service-card">
-                <h2>Service 5</h2>
-                <p>Description of Service 5.</p>
-            </div>
-            <div class="service-card">
-                <h2>Service 6</h2>
-                <p>Description of Service 6.</p>
-            </div>
-        </section>
-        <section class="features">
-            <h2>Features</h2>
-            <p>Details about the features.</p>
-        </section>
-        <section class="portfolio">
-            <h2>Our Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
-            </div>
-            <div class="project">
-                <h3>Project 4</h3>
-                <p>Description of Project 4.</p>
-            </div>
-        </section>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:example@mail.com">example@mail.com</a></p>
-            <p>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Your LinkedIn Profile</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Next Gen AI Solutions</p>
-    </footer>
-    <script>
-        // JavaScript for animations and interactions
-    </script>
+
+<!-- BACKGROUND -->
+<canvas id="bg"></canvas>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">Next Gen AI</div>
+  <a class="btn" href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Build Smart AI Solutions</h1>
+  <p>AI Chatbots, Calling Bots & SaaS Tools for future businesses</p>
+  <a class="btn" href="#contact">Get Started</a>
+</div>
+
+<!-- CARDS -->
+<div class="container">
+
+  <div class="card">
+    <h3>AI Chatbot</h3>
+    <p>Smart chatbot for websites and businesses.</p>
+  </div>
+
+  <div class="card">
+    <h3>AI Calling Bot</h3>
+    <p>Automated voice calling system for clients.</p>
+  </div>
+
+  <div class="card">
+    <h3>SaaS Platform</h3>
+    <p>Scalable software solutions for startups.</p>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>📧 Email: kazimraza6002@gmail.com</p>
+  <p>📱 WhatsApp: 0344-6824859</p>
+  <p>💼 Next Gen AI Solutions</p>
+
+  <a class="btn" href="https://wa.me/923446824859" target="_blank">
+    Message on WhatsApp
+  </a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Next Gen AI Solutions
+</div>
+
+<!-- SCRIPT -->
+<script>
+  const canvas = document.getElementById("bg");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 3;
+      this.speedX = (Math.random() - 0.5);
+      this.speedY = (Math.random() - 0.5);
+    }
+
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.x > canvas.width) this.x = 0;
+      if (this.x < 0) this.x = canvas.width;
+      if (this.y > canvas.height) this.y = 0;
+      if (this.y < 0) this.y = canvas.height;
+    }
+
+    draw() {
+      ctx.fillStyle = "rgba(56,189,248,0.6)";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function init() {
+    particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  init();
+  animate();
+
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+  });
+</script>
+
 </body>
 </html>
